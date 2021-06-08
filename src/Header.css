@@ -1,0 +1,17 @@
+.header{
+    background-color: black;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    
+}
+.gradient{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom,black,white);
+}
+.heading{
+    margin-left: 300px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}

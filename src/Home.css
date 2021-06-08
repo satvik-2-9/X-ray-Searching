@@ -1,0 +1,17 @@
+.website_option{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-left: 50px;
+    height: 30px;
+    width: 30px;
+}
+.header-text{
+    font-family: 'Times New Roman', Times, serif;
+}
+.web-name{
+    font-size: large;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;  
+   color: black;
+}
