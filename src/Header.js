@@ -20,7 +20,7 @@ function Header() {
       </NavDropdown>
     </Nav>
     <Nav>
-      <Nav.Link href=".'/About">More deets</Nav.Link>
+      <Nav.Link href="./">More details</Nav.Link>
       
     </Nav>
   </Navbar.Collapse>
