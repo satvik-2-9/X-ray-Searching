@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import "./Linkedin.css"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Redirect } from 'react-router-dom';
+
 
 
 export default function Linkedin() {
@@ -79,8 +79,10 @@ export default function Linkedin() {
       link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
     }
     
-    alert(link);
-    <Redirect to="./Linkedin"></Redirect>
+    
+    window.location.href = link;
+    alert("redirecting");
+   
   }
 
 
@@ -137,13 +139,10 @@ export default function Linkedin() {
   <div className="form-group row ed">
     <div className="col-sm-10 text-center">
       <button type="submit" className="btn btn-primary bt" onClick={generate}>Find the right people on Linkedin</button>
+      
     </div>
   </div>
       </form>
-      
-      
-     
-
-        </div>
+   </div>
     )
 }
