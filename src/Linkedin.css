@@ -1,3 +1,29 @@
-.data_entry{
-     flex-direction: column;
+
+ @media (max-width:500px){
+     .ok{
+          padding-top: 100px;
+     }
+}
+@media(min-width:1000px){
+     .bt{
+          margin-left: 500px;
+     }
+} 
+.row{
+     padding:0;
+     margin:0 ; 
+}
+.bt{
+     margin-top: 30px;
+     margin-bottom: 18px;
+}
+.ok{
+     margin: 0;
+     padding:0;
+     height: 100% ; 
+     width: 100% ; 
+     background-color: #dbe6fd;
+}
+.ed{
+     padding-bottom: 50px;
 }

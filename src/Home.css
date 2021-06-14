@@ -8,10 +8,16 @@
     width: 30px;
 }
 .header-text{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: large;
 }
 .web-name{
-    font-size: large;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;  
-   color: black;
+    font-size: medium;
+    font-family: 'Baloo Tammudu 2', cursive;
+   color:rgb(74, 74, 87) ;
+}
+.body{
+    min-height: calc(100vh - 410px - 14px) ; 
+    background-color: #dbe6fd;
+    padding-left: 40px;
 }

@@ -5,13 +5,35 @@
     align-items: center;
     
 }
+/* 3c8dad  faf1e6 */
+
 .gradient{
     width: 100%;
     height: 100px;
-    background-image: linear-gradient(to bottom,black,white);
+    background-image: linear-gradient(to bottom,#293b5f,#dbe6fd);
 }
 .heading{
     margin-left: 300px;
     color: red;
     font-family: 'Courier New', Courier, monospace;
+}
+.bar{
+    height:100px ; 
+    padding-bottom:100px ;  
+    background-color: #293b5f;
+}
+.txt{
+    color: black;
+}
+Nav.link {
+  padding-left:20px ;
+  padding-right: 20px ; 
+}
+.imgdiv{
+    background-color: #293b5f;
+    align-items: center;
+}
+.imgdiv img{
+    padding-left: 50px;
+    height: 160px;
 }

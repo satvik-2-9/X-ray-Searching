@@ -1,25 +1,38 @@
 import React from 'react'
 import "./Header.css"
-import { Link } from "react-router-dom"
-
+import {
+    Navbar, Nav,NavDropdown} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import logo from './img/a.png'; 
 function Header() {
     return (
-        <nav >
-               
-            {/* first thing i want is the logo. */}
-            <div className="header">
-            <a href="https://www.jio.com/">
-                <img className="header_logo" src="https://cdn.ndtv.com/tech/images/gadgets/thumb/reliance_jio_small.jpg"></img>
-            </a>
+        <div >   
+ <Navbar collapseOnSelect expand="lg"  variant="dark" className="bar"> 
+  <Navbar.Brand className="txt" href="#home">X-Ray Search</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="./" className="txt" >Home</Nav.Link>
+      <NavDropdown title="Target More Websites" className="txt" id="collasible-nav-dropdown">
+        <NavDropdown.Item href="./Linkedin">Linkedin</NavDropdown.Item>
+        <NavDropdown.Item href="./Github">Github</NavDropdown.Item>
+        <NavDropdown.Item href="./">Choose from list</NavDropdown.Item>
+      </NavDropdown>
+    </Nav>
+    <Nav>
+      <Nav.Link href=".'/About">More deets</Nav.Link>
+      
+    </Nav>
+  </Navbar.Collapse>
+        </Navbar>
 
-            <div className="heading">
-                <h1>X-Ray Search</h1>
-            </div>
-                
-            </div>
+        <div className="imgdiv">
+        <img src={logo} alt="hiring_proffessional"/>
+        </div>
+        <div className="gradient"></div>
+
             
-            <div className="gradient" ></div>
-        </nav>
+        </div>
     )
 }
 

@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom" ;
 import Header from "./Header"
 import Home from "./Home"
 import Linkedin from "./Linkedin"
+import Footer from "./Footer"
 
 // we will use react-router for the routing part.
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <Router>
     <div className="App">
         <Switch>
-          <Route path="/Linkedin">
+          <Route path="/Linkedin"> 
             <Header></Header>
             <Linkedin></Linkedin>
           </Route>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/">
             <Header></Header>
             <Home></Home>
+            <Footer></Footer>
           </Route>
       
           <Route path="/:random">

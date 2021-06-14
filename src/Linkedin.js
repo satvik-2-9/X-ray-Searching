@@ -1,22 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import "./Linkedin.css"
-
-import { Alert } from "bootstrap"; 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { useHistory } from 'react-router';
+import { Redirect } from 'react-router-dom';
+
 
 export default function Linkedin() {
    
-    const [country, setCountry] = useState("");
+
     const [jobTitle, setjobTitle] = useState("");
     const [location, setlocation] = useState("");
     const [exclude, setexclude] = useState([]); 
     const [education, seteducation] = useState("");
     const [currentEmpoyer, setcurrentEmpoyer] = useState("");
-    const [f, setf] = useState(false); 
+    var link = "http://www.google.com/search?q=+";
   
-
-  var link = "http://www.google.com/search?q=+"; 
   const generate = () => {
     var quote = "\"";
     
@@ -24,7 +21,7 @@ export default function Linkedin() {
       var j = jobTitle.toUpperCase(); 
       var tmp = "";
       for (var i = 0; i < j.length; i++){
-        if (j[i] == " ") {
+        if (j[i] === " ") {
           link += (quote + tmp + quote);
           link += " OR ";
           tmp = "";
@@ -32,7 +29,7 @@ export default function Linkedin() {
           continue; 
         } else {
           tmp += j[i];
-          if (i == j.length - 1) {
+          if (i === j.length - 1) {
             link += (quote + tmp + quote); 
           }
         }
@@ -40,18 +37,18 @@ export default function Linkedin() {
     }
     if (location.length > 0) {
       link += "+"; 
-      var tmp = "";
-      for (var i = 0; i < location.length; i++){
-        if (location[i] == " ") {
-          link += (quote + tmp + quote);
+      var tmp2 = "";
+      for (var i2 = 0; i2 < location.length; i2++){
+        if (location[i2] === " ") {
+          link += (quote + tmp2 + quote);
           link += " OR "; 
-          tmp = "";
-          i += 3;
+          tmp2 = "";
+          i2 += 3;
           continue; 
         } else {
-          tmp += location[i];
-          if (i == location.length - 1) {
-            link += (quote + tmp + quote); 
+          tmp2 += location[i2];
+          if (i2 === location.length - 1) {
+            link += (quote + tmp2 + quote); 
           }
         }
       }
@@ -59,15 +56,15 @@ export default function Linkedin() {
     
     if (exclude.length > 0) {
       link += "-" + quote; 
-      var tmp = "";
-      for (var i = 0; i < exclude.length; i++){
-        if (exclude[i] == " ") {
-          link += (tmp + "+"); 
-          tmp = ""; 
+      var tmp3 = "";
+      for (var i3 = 0; i3 < exclude.length; i3++){
+        if (exclude[i3] === " ") {
+          link += (tmp3 + "+"); 
+          tmp3 = ""; 
         } else {
-          tmp += exclude[i];
-          if (i == exclude.length - 1) {
-            link += tmp; 
+          tmp3 += exclude[i3];
+          if (i3 === exclude.length - 1) {
+            link += tmp3; 
           }
         }
       }
@@ -79,70 +76,74 @@ export default function Linkedin() {
       link += ("&as_oq=" + edu); 
     }
     if (currentEmpoyer.length > 0) {
-      link += "+" + quote + "Current+%2A+" +  currentEmpoyer  + "%2A+" + quote; 
+      link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
     }
-    alert("Copy the following link in your browser: " + link); 
-     
+    
+    alert(link);
+    <Redirect to="./Linkedin"></Redirect>
   }
+
+
+  
    
 
   return (
-        <div>
+        <div className="ok">
 
             {/* i'm gonna need country,job Title,Location,Keywords to exclude,education,currentemployer */}
                      
-<form>
+<form >
   <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Country: </label>
+    <label  className="col-sm-2 col-form-label text-center">Country: </label>
     <div className="col-sm-10">
-      <input type="text"  className="form-control" id="inputEmail3" placeholder="Eg. India" onChange={(e)=>{setCountry(e.target.value)}}></input>
+      <input type="text"  className="form-control text-center" id="inputEmail3" placeholder="Eg. India"></input>
     </div>
   </div>
   <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Job Title: </label>
+    <label  className="col-sm-2 col-form-label text-center">Job Title: </label>
     <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" placeholder="Eg. Accountant OR cfo" onChange={(e) => {setjobTitle(e.target.value) }}></input>
+            <input type="text" className="form-control text-center" id="inputPassword3" placeholder="Eg. Accountant OR cfo" onChange={(e) => {setjobTitle(e.target.value) }}></input>
     </div>
           </div>
 
     <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Location: </label>
+    <label  className="col-sm-2 col-form-label text-center">Location: </label>
     <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" placeholder="Eg. London OR Paris" onChange={(e) => { setlocation(e.target.value) }}></input>
+            <input type="text" className="form-control text-center" id="inputPassword3" placeholder="Eg. London OR Paris" onChange={(e) => { setlocation(e.target.value) }}></input>
     </div>
           </div>
 
     <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Keywords to exclude: </label>
+    <label  className="col-sm-2 col-form-label text-center">Keywords to exclude: </label>
     <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" placeholder="Eg. Assistant OR Secretary" onChange={(e) => { setexclude(e.target.value) }}></input>
+            <input type="text" className="form-control text-center" id="inputPassword3" placeholder="Eg. Assistant OR Secretary" onChange={(e) => { setexclude(e.target.value) }}></input>
     </div>
       </div>
       
           <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Education: </label>
-    <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" placeholder="Eg. Masters Degree" onChange={(e) => { seteducation(e.target.value) }}></input>
+    <label  className="col-sm-2 col-form-label text-center">Education: </label>
+    <div className="col-sm-10 ">
+            <input type="text" className="form-control text-center" id="inputPassword3" placeholder="Eg. Masters Degree" onChange={(e) => { seteducation(e.target.value) }}></input>
     </div>
           </div>
-          <div className="form-group row">
-    <label  className="col-sm-2 col-form-label">Current Employer: </label>
+          <div className="form-group row ">
+    <label  className="col-sm-2 col-form-label text-center">Current Employer: </label>
     <div className="col-sm-10">
-            <input type="text" className="form-control" id="inputPassword3" placeholder="Eg. Reliance" onChange={(e) => { setcurrentEmpoyer(e.target.value) }}></input>
+            <input type="text" className="form-control text-center" id="inputPassword3" placeholder="Eg. Reliance" onChange={(e) => { setcurrentEmpoyer(e.target.value) }}></input>
     </div>
   </div>
   
   
-  <div className="form-group row">
-    <div className="col-sm-10">
-      <button type="submit" className="btn btn-primary" onClick={generate}>Find the right people on Linkedin</button>
+  <div className="form-group row ed">
+    <div className="col-sm-10 text-center">
+      <button type="submit" className="btn btn-primary bt" onClick={generate}>Find the right people on Linkedin</button>
     </div>
   </div>
-        </form>
-          
+      </form>
+      
+      
+     
 
-
-            
         </div>
     )
 }
