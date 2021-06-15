@@ -9,7 +9,7 @@ export default function Footer() {
 
         <div className="footer">
                
-            <p>Made with ❤️ by Satvik Batra</p>
+            <p>Made by Satvik Batra</p>
             <p>{new Date().getFullYear()} ~ All Rights Reserved.</p>
             
             </div>

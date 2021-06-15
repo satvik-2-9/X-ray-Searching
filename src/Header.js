@@ -8,7 +8,7 @@ function Header() {
     return (
         <div >   
  <Navbar collapseOnSelect expand="lg"  variant="dark" className="bar"> 
-  <Navbar.Brand className="txt" href="#home">X-Ray Search</Navbar.Brand>
+  <Navbar.Brand className="txt" href="./">X-Ray Search</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
