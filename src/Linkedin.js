@@ -9,7 +9,7 @@ export default function Linkedin() {
 
     const [jobTitle, setjobTitle] = useState("");
     const [location, setlocation] = useState("");
-    const [exclude, setexclude] = useState([]); 
+    const [exclude, setexclude] = useState(""); 
     const [education, seteducation] = useState("");
     const [currentEmpoyer, setcurrentEmpoyer] = useState("");
     var link = "http://www.google.com/search?q=+";
@@ -18,16 +18,12 @@ export default function Linkedin() {
     var quote = "\"";
     
     if (jobTitle.length > 0) {
-      var j = jobTitle.toUpperCase(); 
+      var j = jobTitle.toUpperCase();
       var tmp = "";
       for (var i = 0; i < j.length; i++){
         if (j[i] === " ") {
-          link += (quote + tmp + quote);
-          link += " OR ";
-          tmp = "";
-          i += 3;
-          continue; 
-        } else {
+          tmp += '+'; 
+        }else{
           tmp += j[i];
           if (i === j.length - 1) {
             link += (quote + tmp + quote); 
