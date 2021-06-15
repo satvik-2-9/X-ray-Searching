@@ -76,6 +76,7 @@ export default function Linkedin() {
       link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
     }
     window.location.href = link;
+    alert("redirecting"); 
   }
 
 
