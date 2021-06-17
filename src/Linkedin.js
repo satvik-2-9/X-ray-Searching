@@ -12,7 +12,7 @@ export default function Linkedin() {
     const [exclude, setexclude] = useState(""); 
     const [education, seteducation] = useState("");
     const [currentEmpoyer, setcurrentEmpoyer] = useState("");
-    var link = "http://www.google.com/search?q=+";
+    var link = "https://www.google.com/search?q=+";
   
   const generate = () => {
     var quote = "\"";
@@ -75,13 +75,12 @@ export default function Linkedin() {
     if (currentEmpoyer.length > 0) {
       link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
     }
-    window.location.href = link;
-    alert("redirecting"); 
+    window.location = link; 
+    alert("redirecting");
+    
   }
 
 
-  
-   
 
   return (
         <div className="ok">
