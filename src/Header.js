@@ -12,7 +12,7 @@ function Header() {
 
  <Navbar collapseOnSelect expand="lg"  variant="dark" className="bar"> 
           <div className="brand">
-          <Navbar.Brand className="txt" href="./">Recruiter's Tool</Navbar.Brand>
+          <Navbar.Brand className="txt" >Recruiter's Tool</Navbar.Brand>
           <span class="logo__label">X-Ray Search</span>
           </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
