@@ -77,7 +77,7 @@ export default function Linkedin() {
     }
     /* link = " \'" + link + "\'"; */ 
 
-    window.location.href = link; 
+    window.location.assign(link); 
     alert("redirecting");
     
   }
