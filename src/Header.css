@@ -100,3 +100,9 @@ ul {
 .pt{
     color: black;
 }
+a{
+    color: #C8C2BC !important;; 
+}
+a:hover{
+   color: white !important;
+}
