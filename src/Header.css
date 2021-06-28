@@ -1,12 +1,11 @@
-.header{
-    background-color: black;
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    
-}
-/* 3c8dad  faf1e6 */
 
+/* 3c8dad  faf1e6 */
+.header{
+    padding:0; 
+    background-color: #291300;
+    background-image: url(https://recruitin.net/assets/images/background-illustration-white.png), linear-gradient(-150deg, #431f00 0%, #291300 97%);
+    background-size: 380px, contain;
+}
 .gradient{
     width: 100%;
     height: 100px;
@@ -19,8 +18,23 @@
 }
 .bar{
     height:100px ; 
+    padding: 0!important ;
     padding-bottom:100px ;  
-    background-color: #293b5f;
+    height: 140px;
+}
+.navbar-brand{
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.brand{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding-top: 24px;
+}
+.logo__label{
+    padding-left:20px;
+    color: rgba(255,255,255,.5);
 }
 .txt{
     color: black;
@@ -29,11 +43,60 @@ Nav.link {
   padding-left:20px ;
   padding-right: 20px ; 
 }
-.imgdiv{
-    background-color: #293b5f;
-    align-items: center;
+a{
+    color: white !important;
 }
-.imgdiv img{
-    padding-left: 50px;
-    height: 160px;
+.cd-secondary-nav{
+    text-decoration: none;
+    overflow-x: auto;
+}
+.cd-secondary-nav ul{
+    display: flex;
+}
+.cd-secondary-nav li{
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.cd-secondary-nav ul, .cd-secondary-nav li, .cd-secondary-nav a {
+    height: 100%;
+}
+.list--inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.nav__item{
+    color: rgb(74, 74, 87);
+}
+.nav__link{
+    display: block;
+    padding: 0 24px;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+.nav{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.c{
+    padding-left: 10px;
+}
+.cx{
+    padding-left: 20px;
+}
+.list--inline{
+    overflow-y: hidden; 
+}
+.pt{
+    color: black;
 }

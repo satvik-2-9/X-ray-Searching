@@ -15,6 +15,7 @@ function App() {
           <Route path="/Linkedin"> 
             <Header></Header>
             <Linkedin></Linkedin>
+            <Footer></Footer>
           </Route>
           
           <Route path="/github">

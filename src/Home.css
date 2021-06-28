@@ -14,10 +14,11 @@
 .web-name{
     font-size: medium;
     font-family: 'Baloo Tammudu 2', cursive;
-   color:rgb(74, 74, 87) ;
+    color:rgb(74, 74, 87) ;
 }
 .body{
-    min-height: calc(100vh - 410px - 14px) ; 
-    background-color: #dbe6fd;
+    padding-top: 20px;
+    min-height: calc(100vh - 328px) ; 
+    background-color: white;
     padding-left: 40px;
 }
