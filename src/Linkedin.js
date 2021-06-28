@@ -75,7 +75,8 @@ export default function Linkedin() {
     if (currentEmpoyer.length > 0) {
       link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
     }
-    window.location.reload = link;
+    /* link = " \'" + link + "\'"; */
+    window.location.assign(link); 
     alert("redirecting");
     
   }
