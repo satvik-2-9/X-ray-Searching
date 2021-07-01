@@ -20,66 +20,63 @@ export default function Linkedin() {
     if (jobTitle.length > 0) {
       var j = jobTitle.toUpperCase();
       var tmp = "";
-      for (var i = 0; i < j.length; i++){
+      for (var i = 0; i < j.length; i++) {
         if (j[i] === " ") {
-          tmp += '+'; 
-        }else{
+          tmp += '+';
+        } else {
           tmp += j[i];
           if (i === j.length - 1) {
-            link += (quote + tmp + quote); 
+            link += (quote + tmp + quote);
           }
         }
       }
     }
     
     if (location.length > 0) {
-      link += "+"; 
+      link += "+";
       var tmp2 = "";
-      for (var i2 = 0; i2 < location.length; i2++){
+      for (var i2 = 0; i2 < location.length; i2++) {
         if (location[i2] === " ") {
           link += (quote + tmp2 + quote);
-          link += " OR "; 
+          link += " OR ";
           tmp2 = "";
           i2 += 3;
-          continue; 
+          continue;
         } else {
           tmp2 += location[i2];
           if (i2 === location.length - 1) {
-            link += (quote + tmp2 + quote); 
+            link += (quote + tmp2 + quote);
           }
         }
       }
     }
     
     if (exclude.length > 0) {
-      link += "-" + quote; 
+      link += "-" + quote;
       var tmp3 = "";
-      for (var i3 = 0; i3 < exclude.length; i3++){
+      for (var i3 = 0; i3 < exclude.length; i3++) {
         if (exclude[i3] === " ") {
-          link += (tmp3 + "+"); 
-          tmp3 = ""; 
+          link += (tmp3 + "+");
+          tmp3 = "";
         } else {
           tmp3 += exclude[i3];
           if (i3 === exclude.length - 1) {
-            link += tmp3; 
+            link += tmp3;
           }
         }
       }
       link += quote;
     }
-    link += (" -intitle:" + quote + "profiles" + quote + " -inurl:" + quote + "dir/+" + quote + "+site:in.linkedin.com/in/+OR+site:in.linkedin.com/pub/"); 
+    link += (" -intitle:" + quote + "profiles" + quote + " -inurl:" + quote + "dir/+" + quote + "+site:in.linkedin.com/in/+OR+site:in.linkedin.com/pub/");
     if (education.length > 0) {
-      var edu = education.toLowerCase(); 
-      link += ("&as_oq=" + edu); 
+      var edu = education.toLowerCase();
+      link += ("&as_oq=" + edu);
     }
     if (currentEmpoyer.length > 0) {
-      link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote); 
+      link += ("+" + quote + "Current+%2A+" + currentEmpoyer + "%2A+" + quote);
     }
-    /* link = " \'" + link + "\'"; */ 
-
-    window.location.assign(link); 
-    alert("redirecting");
-    
+   /*  link = " \"" + link + "\""; */
+    window.open(link, 'blank'); 
   }
 
 
