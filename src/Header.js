@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Header.css"
-import {
-    Navbar, Nav,NavDropdown} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 function Header() {
     return (
@@ -21,7 +20,7 @@ function Header() {
       <Nav.Link href="./" className="txt" >Home</Nav.Link>
 
     </Nav>
-    <Nav><Nav.Link href="./">More details</Nav.Link></Nav>
+    <Nav><Nav.Link href="https://resources.workable.com/hr-terms/what-is-google-x-ray-search#:~:text=X%2DRay%20search%2C%20also%20known,symbols%20into%20the%20search%20bar.">More details</Nav.Link></Nav>
           </Navbar.Collapse>
         </Navbar>
 

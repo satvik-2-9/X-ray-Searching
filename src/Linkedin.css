@@ -28,3 +28,19 @@
 .ed{
      padding-bottom: 50px;
 }
+
+.check{
+     padding-left: 60% !important;
+     color:#444444; 
+     align-items: center;
+     text-align: right;
+}
+.x{
+     font-weight: lighter;
+     padding-left: 10px;
+}
+.dropdown{
+     margin-left: 45%;
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
