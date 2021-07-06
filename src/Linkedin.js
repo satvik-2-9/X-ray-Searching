@@ -46,7 +46,7 @@ export default function Linkedin() {
 
     link += (" -intitle:" + quote + "profiles" + quote + " -inurl:" + quote + "dir/+" + quote + "+site:in.linkedin.com/in/+OR+site:in.linkedin.com/pub/");
     
-    alert(education); 
+  
     if (education.length > 0) {
       link += ("&as_oq=");
       for (var i4 = 0; i4 < education.length; i4++){
