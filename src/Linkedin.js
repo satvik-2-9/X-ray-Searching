@@ -101,9 +101,10 @@ export default function Linkedin() {
         <div className="form-group row check">
              
           {/* basically i can tap into the properties of the HTML element that were affected in the event. */}
-            <input type="checkbox" onChange={(e)=>{setcheck(e.target.checked)}} ></input>
+          <div className="bx">  
+            <input type="checkbox"  onChange={(e) => { setcheck(e.target.checked) }} ></input>
             <label className="x" >Show similar jobs?</label>
-        
+            </div>
         </div>
 
     <div className="form-group row">
