@@ -48,9 +48,18 @@ export default function Linkedin() {
     
   
     if (education.length > 0) {
-      link += ("&as_oq=");
-      for (var i4 = 0; i4 < education.length; i4++){
-        link += education[i4]; 
+      if (education != "All Candidates") {
+        link += ("&as_oq=");
+        if (education === "Masters Degree") {
+          link += "masters+mba+master+diplome+msc+magister+magisteres+maitrise";
+        } else if (education === "Doctoral Degree") {
+          link += "dr+Ph.D.+PhD+D.Phil+DPhil+doctor+Doctorado+Doktor+Doctorat+Doutorado+DrSc+Tohtori+Doctorate+Doctora+Duktorah+Dottorato+Daktaras+Doutoramento+Doktorgrad";
+        } else if (education === "Bachelors Degree") {
+          link += "bachelor+degree+licence"; 
+        } else if (education === "High School") {
+          link += "Graduate"; 
+        }
+
       }
     }
 
@@ -66,7 +75,8 @@ export default function Linkedin() {
       link += '~';
       link += d.substr(32, d.length - 32); 
     }
-    
+     
+  
     window.open(link, 'blank'); 
     
     /* with related ticked on -> http://www.google.com/search?q=~+"cfo"+"LONDON" -intitle:"profiles" -inurl:"dir/+"+site:hu.linkedin.com/in/+OR+site:hu.linkedin.com/pub/ */
