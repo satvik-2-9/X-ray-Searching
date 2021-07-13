@@ -15,7 +15,7 @@ function Home() {
                             <h3 className="web-name">Linkedin</h3>
                         
                         </Link>
-                        <img className="logo" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="linkedin_logo"></img>
+                        <img className="logo link" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="linkedin_logo"></img>
                     </div>
                 </li>
                 <li>
@@ -23,7 +23,7 @@ function Home() {
                         <Link to="./github" style={{textDecoration:'none'}}>
                         <h3 className="web-name">Github</h3>
                         </Link>
-                        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzFQAzDc8TRNcsSQ6o2Nll48B9mGDC9-jBoQ&usqp=CAU" alt="github_logo"></img>
+                        <img className="logo git" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzFQAzDc8TRNcsSQ6o2Nll48B9mGDC9-jBoQ&usqp=CAU" alt="github_logo"></img>
                     </div>
                 </li>
                 <li>
@@ -31,7 +31,7 @@ function Home() {
                         <Link to="./dribble" style={{textDecoration:'none'}}>
                         <h3 className="web-name">Dribble</h3>
                         </Link>
-                        <img className="logo" src={dribble} alt="dribble_logo"></img>
+                        <img className="logo drib" src={dribble} alt="dribble_logo"></img>
                     </div>
                 </li>
                 <li>
@@ -39,14 +39,14 @@ function Home() {
                         <Link to="./xing" style={{textDecoration:'none'}}>
                         <h3 className="web-name">Xing</h3>
                         </Link>
-                        <img className="logo" src={xing} alt="xing_logo"></img>
+                        <img className="logo x" src={xing} alt="xing_logo"></img>
                     </div>
                     <li>
                     <div className="website_option">
                         <Link to="./stack" style={{textDecoration:'none'}}>
                         <h3 className="web-name">Stack Overflow</h3>
                         </Link>
-                        <img className="logo" src={stack} alt="stack_logo"></img>
+                        <img className="logo stack" src={stack} alt="stack_logo"></img>
                     </div>
                     </li>
                 </li>
